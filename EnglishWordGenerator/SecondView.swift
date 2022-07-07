@@ -7,20 +7,8 @@
 
 import SwiftUI
 
-struct WordCard: View {
-    var word: String
-    
-    var body: some View {
-        Text(word)
-            .frame(maxWidth: .infinity, maxHeight: 300)
-            .background(RoundedRectangle(cornerRadius: 10)
-                .fill(Color.white)
-                .shadow(color: Color.black.opacity(0.15), radius: 30, x: 0, y: 0))
-    }
-}
-
 struct SecondView: View {
-    @ObservedObject var networkManager = NetworkManager()
+    @StateObject var networkManager = NetworkManager()
     @Binding var numberOfWord: Int
     
     var body: some View {
@@ -32,25 +20,13 @@ struct SecondView: View {
             }, label: {
                 Text("Re-Generate")
             })
+            
             List(networkManager.wordList, id: \.self) { word in
                 Text(word)
             }
             .onAppear {
                 networkManager.getData(number: numberOfWord)
             }
-            
-//            ScrollView(.horizontal) {
-//                HStack {
-//                    ForEach(networkManager.wordList, id: \.self) { word in
-//                        WordCard(word: word)
-//                    }
-//                }
-//                .padding(16)
-//            }
-//            .onAppear {
-//                networkManager.getData(number: numberOfWord)
-//            }
         }
-//        .padding(.horizontal, 16)
     }
 }

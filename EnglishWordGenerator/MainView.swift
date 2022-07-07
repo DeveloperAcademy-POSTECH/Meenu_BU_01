@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var networkManager = NetworkManager()
     @State private var numberOfWord: Int = 10
     
     var body: some View {
@@ -20,7 +19,7 @@ struct MainView: View {
                     Text("Generate")
                 })
             }
+            .padding(.horizontal, 16)
         }
-        .padding(.horizontal, 16)
     }
 }
