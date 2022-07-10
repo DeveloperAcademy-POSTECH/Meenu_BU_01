@@ -12,7 +12,7 @@ class NetworkManager: ObservableObject {
     
     let urlString = "https://random-word-api.herokuapp.com/word"
     
-    func getData(number: Int) {
+    func requestWordList(number: Int) {
         var urlComponents = URLComponents(string: urlString)
         let numberQuery = URLQueryItem(name: "number", value: "\(number)")
         urlComponents?.queryItems = [numberQuery]

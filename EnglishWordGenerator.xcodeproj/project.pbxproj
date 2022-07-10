@@ -12,7 +12,7 @@
 		26F5FFBD2843DC2200C14D69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F5FFBC2843DC2200C14D69 /* Assets.xcassets */; };
 		26F5FFC02843DC2200C14D69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26F5FFBF2843DC2200C14D69 /* Preview Assets.xcassets */; };
 		26F5FFC72843DC4700C14D69 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F5FFC62843DC4700C14D69 /* MainView.swift */; };
-		26F5FFC92843DCD700C14D69 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F5FFC82843DCD700C14D69 /* SecondView.swift */; };
+		26F5FFC92843DCD700C14D69 /* WordGeneratingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F5FFC82843DCD700C14D69 /* WordGeneratingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +22,7 @@
 		26F5FFBC2843DC2200C14D69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26F5FFBF2843DC2200C14D69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26F5FFC62843DC4700C14D69 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		26F5FFC82843DCD700C14D69 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		26F5FFC82843DCD700C14D69 /* WordGeneratingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGeneratingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				26F5FFB82843DC2000C14D69 /* EnglishWordGeneratorApp.swift */,
 				26C0D5B92847B850009CE570 /* NetworkManager.swift */,
 				26F5FFC62843DC4700C14D69 /* MainView.swift */,
-				26F5FFC82843DCD700C14D69 /* SecondView.swift */,
+				26F5FFC82843DCD700C14D69 /* WordGeneratingView.swift */,
 				26F5FFBC2843DC2200C14D69 /* Assets.xcassets */,
 				26F5FFBE2843DC2200C14D69 /* Preview Content */,
 			);
@@ -145,7 +145,7 @@
 			files = (
 				26F5FFC72843DC4700C14D69 /* MainView.swift in Sources */,
 				26C0D5BA2847B850009CE570 /* NetworkManager.swift in Sources */,
-				26F5FFC92843DCD700C14D69 /* SecondView.swift in Sources */,
+				26F5FFC92843DCD700C14D69 /* WordGeneratingView.swift in Sources */,
 				26F5FFB92843DC2000C14D69 /* EnglishWordGeneratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
