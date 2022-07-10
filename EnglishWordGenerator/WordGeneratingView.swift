@@ -1,5 +1,5 @@
 //
-//  SecondView.swift
+//  WordGeneratingViewView.swift
 //  EnglishWordGenerator
 //
 //  Created by 김민택 on 2022/05/30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SecondView: View {
+struct WordGeneratingView: View {
     @StateObject var networkManager = NetworkManager()
     @Binding var numberOfWord: Int
     
@@ -15,8 +15,9 @@ struct SecondView: View {
         VStack {
             Stepper(value: $numberOfWord, in: 1...15, step: 1, label: { Text("\(numberOfWord)개") })
                 .padding(.horizontal, 16)
+            
             Button(action: {
-                networkManager.getData(number: numberOfWord)
+                networkManager.requestWordList(number: numberOfWord)
             }, label: {
                 Text("Re-Generate")
             })
@@ -25,7 +26,7 @@ struct SecondView: View {
                 Text(word)
             }
             .onAppear {
-                networkManager.getData(number: numberOfWord)
+                networkManager.requestWordList(number: numberOfWord)
             }
         }
     }
