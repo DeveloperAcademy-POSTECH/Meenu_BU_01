@@ -29,5 +29,6 @@ struct WordGeneratingView: View {
                 networkManager.requestWordList(number: numberOfWord)
             }
         }
+        .navigationTitle("Word Generator")
     }
 }
