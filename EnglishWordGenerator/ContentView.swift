@@ -13,14 +13,22 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection) {
-                MainView().tabItem { Text("Home") }.tag(1)
-                HistoryView().tabItem { Text("History") }.tag(2)
+                MainView().tabItem {
+                    Image(systemName: "house")
+                            .environment(\.symbolVariants, .none)
+                    Text("Home")
+                }.tag(1)
+
+                HistoryView().tabItem {
+                    Image(systemName: "doc.text.magnifyingglass")
+                    Text("History")
+                }.tag(2)
             }
-            .navigationTitle(provideTitle(selection: selection))
+            .navigationTitle(changeNavigationTitle())
         }
     }
     
-    func provideTitle(selection: Int) -> String {
+    func changeNavigationTitle() -> String {
         switch selection {
         case 1:
             return "Home"
