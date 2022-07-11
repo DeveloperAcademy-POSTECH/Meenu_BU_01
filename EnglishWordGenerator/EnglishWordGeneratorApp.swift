@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct EnglishWordGeneratorApp: App {
+    private var networkManger = NetworkManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(networkManger)
         }
     }
 }

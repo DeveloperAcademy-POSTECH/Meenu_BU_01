@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct WordGeneratingView: View {
-    @StateObject var networkManager = NetworkManager()
+//    @StateObject var networkManager = NetworkManager()
+    @EnvironmentObject var networkManager: NetworkManager
     @Binding var numberOfWord: Int
     
     var body: some View {
