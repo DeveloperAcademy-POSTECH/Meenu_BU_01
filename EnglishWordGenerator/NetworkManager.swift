@@ -9,6 +9,7 @@ import Foundation
 
 class NetworkManager: ObservableObject {
     @Published var wordList: [String] = []
+    @Published var wordHistory: [[String]] = []
     
     let urlString = "https://random-word-api.herokuapp.com/word"
     
@@ -32,10 +33,20 @@ class NetworkManager: ObservableObject {
                 let result = try JSONDecoder().decode([String].self, from: data)
                 DispatchQueue.main.async {
                     self.wordList = result
+                    self.wordHistory.append(self.wordList)
                 }
             } catch {
                 print("\(error.localizedDescription)\n\(error)")
             }
         }.resume()
+    }
+    
+    func requestIndexOfWordList(wordList: [String]) -> Int {
+        for i in 0..<wordHistory.count {
+            if wordList == wordHistory[i] {
+                return i
+            }
+        }
+        return 0
     }
 }
